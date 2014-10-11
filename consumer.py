@@ -115,7 +115,6 @@ def get_properties(record):
     properties['format'] = (record.xpath('//dc:format/node()', namespaces=NAMESPACES) or [''])[0]
     properties['date'] = (record.xpath('//dc:date/node()', namespaces=NAMESPACES) or [''])[0]
     properties['pdf_download'] = pdf
-    properties['identifiers'] = identifier
 
     for key, item in properties.iteritems():
         properties[key] = copy_to_unicode(item)
